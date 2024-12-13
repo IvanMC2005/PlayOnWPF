@@ -1,0 +1,19 @@
+﻿<Window x:Class="Coursework.Play_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coursework"
+        mc:Ignorable="d"
+        Name="My_window"
+        Title="Play_window"
+        DataContext="{DynamicResource CurrentScore}" ResizeMode="NoResize" WindowState="Maximized" KeyDown="Key_is_pressed" KeyUp="Key_is_up">
+    <Canvas Name ="mycanvas" Background="Transparent" HorizontalAlignment="Center" Width="1428" Height="893">
+        <Rectangle Name="Player" Height="127" Width="236" Canvas.Left="596" Canvas.Top="756" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.277,0.608" >
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="C:\\C#\\Coursework\\bin\\Debug\\Media\\Busket.webp" />
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Text="{Binding Text_score}" FontSize="24" HorizontalAlignment="Left" Height="44" VerticalAlignment="Center" Width="102" Canvas.Left="1326" Canvas.Top="10" RenderTransformOrigin="0.185,0.617" />
+    </Canvas>
+</Window>

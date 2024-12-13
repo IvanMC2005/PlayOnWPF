@@ -1,0 +1,66 @@
+﻿<Window x:Class="Coursework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coursework"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="451" Width="785" MaxHeight="451" MinHeight="451" MaxWidth="785" MinWidth ="785" >
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="Style_panel">
+            <Style.Setters>
+                <Setter Property="Button.Background" Value="Black" />
+                <Setter Property="Button.Foreground" Value="White" />
+                <Setter Property="Button.FontFamily" Value="Verdana" />
+                <Setter Property="Button.Margin" Value="10" />
+            </Style.Setters>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontSize" Value="14" />
+                    <Setter Property="Foreground" Value="Red" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Canvas Name="mycanvas" Margin="0,0,0,7" RenderTransformOrigin="0.756,0.519" Background="#FF7FB2CB">
+        <Label Name="Title" FontFamily="./#Equilibrist" Content="Помогите на меня падает всякое" Width="704" Height="77" FontSize="33"  Canvas.Left="86" RenderTransformOrigin="0.505,0.452" HorizontalAlignment="Left" VerticalAlignment="Top">
+            
+        </Label>
+        <TextBox TextChanged="New_nickname" Name="Name_of_user" FontFamily="./#Equilibrist" Width="304" FontSize="33" Canvas.Left="229" Canvas.Top="77" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Name="Text" Content="Введите ник на текущую игровую сессию" FontSize="18" Foreground="Black" Canvas.Left="204" Canvas.Top="111" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="To_play" Content="PLAY" Click="Button_Click" Height="47" Width="227" Canvas.Left="532" Canvas.Top="355" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.493,0.486" Background="#FF8EE25D" FontFamily="Bold Art" FontSize="16" BorderBrush="#FFB5649F" />
+        <Image Name ="Apple" Height="116" Width="138" Canvas.Left="312" Canvas.Top="189" />
+        <Border x:Name="Paneloftitles" Height="340" Width="185" RenderTransformOrigin="0.553,0.502" Canvas.Left="10" Canvas.Top="67" HorizontalAlignment="Left" VerticalAlignment="Top" OpacityMask="#FFB74242" Background="#FFCB6C6C">
+            <StackPanel x:Name="Mystackpanel">
+                <Button Background="#FF8B8BDA" Content="Таблица рекордов" FontFamily="Sitka Small" Height="32" Click="Record_Button_Click"/>
+                <DataGrid Name="Table_of_players" Height="0"/>
+                <Button Background="White" Content="Правила игры" FontFamily="Sitka Small" Height="32" Click="Rools_button_Click"/>
+                <TextBlock x:Name="Table_rools" LineStackingStrategy="BlockLineHeight" Background="#FFD5EDBC" Height="0" TextAlignment="Justify" FontFamily="Segoe Print" >В игре реализована система 
+                    <LineBreak />
+                    набора очков за счёт сбора  
+                    <LineBreak />
+                    съедобных элементов, при 
+                    <LineBreak />
+                    сборе несъедобного предме-
+                    <LineBreak />
+                    та игрок проигрывает. За-
+                    <LineBreak />
+                    дача набрать наибольшее ко-
+                    <LineBreak />
+                    личество очков. В процессе 
+                    <LineBreak />
+                    игры уровень сложности на-
+                    <LineBreak />
+                    растает с повышением ко-
+                    <LineBreak />
+                    личества набранных очков.</TextBlock>
+                <Button Background="Red" Content="Об авторе" FontFamily="Sitka Small" Height="32" Click="Author_button_Click"/>
+                <TextBlock Name="Table_of_author" LineStackingStrategy="BlockLineHeight" Background="#FFD5EDBC" Height="0" TextWrapping="Wrap" TextAlignment="Justify" FontFamily="Segoe Print" Text="          Автор игры&#x0a;Студент группы О737Б"/>
+            </StackPanel>
+        </Border>
+        <Button Name="Options" Height="47" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFCF3939" Click="Options_Click" Canvas.Top="360" RenderTransformOrigin="0.565,0.567" BorderThickness="0" Canvas.Left="10">
+            <Image x:Name="Option_image" Source="C:\\C#\\Coursework\\bin\\Debug\\Media\\Buton.png" Width="56" Height="38" />
+        </Button>
+
+    </Canvas>
+</Window>
